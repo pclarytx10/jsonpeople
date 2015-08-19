@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>;
   <![endif]-->
 </head>
 
@@ -24,17 +24,25 @@
       <li class="list-group-item">
         <a href="http://davestrus.com/data/people.json" data-remote="true">Load all people</a>
       </li>
+      <li class="list-group-item">
+        <a href="http://elevenfiftyacademy.org">The Happiest Place on Earth</a>
+      </li>
     </ul>
   </nav>
 
-  <main class="well col-sm-6">
-    <ul id="people"></ul>
+  <main class="well col-sm-9">
+    <table class="table-striped">
+      <tbody id="people"></tbody>
+    </table>
   </main>
 
-  <li id="template" class="hidden list-group-item">
-    {{ person.firstName }} {{ person.lastName }}
-    ({{ person.secret }})
-  </li>
+  <table class="hidden"><tbody>
+  <tr id="template" class="hidden list-group-item">
+    <td>{{ person.firstName }}</td>
+    <td>{{ person.lastName }}</td>
+    <td><span style="color: #ccc;">{{ person.secret }}</span></td>
+  </tr>
+  </tbody></table>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/scripts.js"></script>
